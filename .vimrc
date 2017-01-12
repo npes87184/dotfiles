@@ -5,6 +5,9 @@ let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map H <Esc>:tabprevious<CR>
+map L <Esc>:tabnext<CR>
+nnoremap <silent> <F5> :NERDTree<CR>
 set autoindent
 set hls
 set nocompatible              " be iMproved, required
@@ -40,6 +43,8 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/The-NERD-tree'
 
 Plugin 'Raimondi/delimitMate'
+
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
