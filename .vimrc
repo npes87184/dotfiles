@@ -3,11 +3,17 @@ cs add GTAGS
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#tab_nr_type = 1
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map H <Esc>:tabprevious<CR>
 map L <Esc>:tabnext<CR>
 nnoremap <silent> <F5> :NERDTree<CR>
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 set autoindent
 set hls
 set nocompatible              " be iMproved, required
