@@ -3,10 +3,19 @@ cs add GTAGS
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
+
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_splits = 0
+set ttimeoutlen=10
+
+" show indentation guides/lines, note: there is a space after the last \
+" above.
+"" set listchars=tab:\|\ 
+"set list
+
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map H <Esc>:tabprevious<CR>
