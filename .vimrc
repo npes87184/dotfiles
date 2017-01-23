@@ -21,6 +21,7 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map H <Esc>:tabprevious<CR>
 map L <Esc>:tabnext<CR>
 nnoremap <silent> <F5> :NERDTree<CR>
+nnoremap <F8> :TagbarToggle<CR>
 :command WQ wq
 :command Wq wq
 :command W w
@@ -55,13 +56,13 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tomasr/molokai'
 
-Plugin 'vim-scripts/taglist.vim'
-
 Plugin 'vim-scripts/The-NERD-tree'
 
 Plugin 'Raimondi/delimitMate'
 
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
