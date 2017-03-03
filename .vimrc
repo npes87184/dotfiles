@@ -1,14 +1,10 @@
+" gtags
+set cscopetag
 set cscopeprg=gtags-cscope
-cs add GTAGS
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#show_splits = 0
 set ttimeoutlen=10
 
 " show indentation guides/lines, note: there is a space after the last \
@@ -26,6 +22,7 @@ nnoremap <F8> :TagbarToggle<CR>
 :command Wq wq
 :command W w
 :command Q q
+set number
 set autoindent
 set hls
 set nocompatible              " be iMproved, required
@@ -45,8 +42,6 @@ Plugin 'aceofall/gtags.vim'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
-
-Plugin 'mileszs/ack.vim'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -86,10 +81,24 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='bubblegum'
 
-" run Ack (ag) in vim "
-let g:ackprg = 'ag --nogroup --nocolor --column'
+set encoding=utf-8
 
-execute pathogen#infect()
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline_powerline_fonts = 1
+"let g:airline_symbols_ascii = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.spell = ''
+let g:airline_symbols.notexists = ''
+let g:airline_symbols.whitespace = ''
+let g:airline_symbols.linenr = ''
 
 " Let ctrlp can open search result in new tab "
 let g:ctrlp_prompt_mappings = {
@@ -99,6 +108,3 @@ let g:ctrlp_prompt_mappings = {
 
 colorscheme molokai
 
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
