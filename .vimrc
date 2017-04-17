@@ -5,7 +5,10 @@ let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 set ttimeoutlen=10
+set updatetime=250
 
 " show indentation guides/lines, note: there is a space after the last \
 " above.
@@ -16,13 +19,16 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map H <Esc>:tabprevious<CR>
 map L <Esc>:tabnext<CR>
+map <Leader>g <Esc>:GitGutterSignsToggle<CR>
 nnoremap <silent> <F5> :NERDTree<CR>
 nnoremap <F8> :TagbarToggle<CR>
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
+cnoreabbrev ag Ack!
 set number
+set cursorline
 set autoindent
 set hls
 set nocompatible              " be iMproved, required
@@ -59,7 +65,9 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'majutsushi/tagbar'
 
-Plugin 'easymotion/vim-easymotion'
+Plugin 'mileszs/ack.vim'
+
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,6 +113,10 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+
+" Turn off gitgutter default
+let g:gitgutter_map_keys = 0
+let g:gitgutter_signs = 0
 
 colorscheme molokai
 

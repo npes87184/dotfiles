@@ -1,12 +1,11 @@
 #!/bin/sh
 
 tmux new-session -d -c '/synosrc/' -n 'bsrc'
-tmux new-window -c '/synopack/pkgscripts-ng/' -n 'bpack'
+tmux new-window -c '/synopack_1/pkgscripts-ng/' -n 'bpack'
 tmux new-window -n '1'
-tmux new-window -n '2'
 tmux new-window -n '3'
-tmux new-window -c '/synosrc/ds.base/source/' -n 'src'
-tmux new-window -c '/synopack/source/' -n 'pack'
+tmux new-window -c '/synopack_1/source/synoccc' -n 'ccc1'
+tmux new-window -c '/synopack_1/source/synovirtualization' -n 'vir1'
 
 tmux select-window -t 1
 
