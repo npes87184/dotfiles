@@ -16,7 +16,6 @@ set updatetime=250
 "set list
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map H <Esc>:tabprevious<CR>
 map L <Esc>:tabnext<CR>
 map <Leader>g <Esc>:GitGutterSignsToggle<CR>

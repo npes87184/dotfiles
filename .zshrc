@@ -85,3 +85,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dc=cd 
+alias rg='rg --colors=path:style:bold --colors=path:fg:green --colors=line:style:bold --colors=line:fg:yellow --colors=match:style:nobold --colors=match:bg:yellow --colors=match:fg:black'
