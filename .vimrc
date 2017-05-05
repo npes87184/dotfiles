@@ -9,6 +9,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 set ttimeoutlen=10
 set updatetime=250
+set nocompatible
 
 " show indentation guides/lines, note: there is a space after the last \
 " above.
@@ -29,7 +30,7 @@ set number
 set cursorline
 set autoindent
 set hls
-set nocompatible              " be iMproved, required
+"set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
