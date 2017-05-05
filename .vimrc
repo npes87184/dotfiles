@@ -16,10 +16,9 @@ set updatetime=250
 "set list
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map H <Esc>:tabprevious<CR>
-map L <Esc>:tabnext<CR>
+nnoremap H :tabprevious<CR>
+nnoremap L :tabnext<CR>
 map <Leader>g <Esc>:GitGutterSignsToggle<CR>
-nnoremap <silent> <F5> :NERDTree<CR>
 nnoremap <F8> :TagbarToggle<CR>
 :command WQ wq
 :command Wq wq
@@ -55,8 +54,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tomasr/molokai'
-
-Plugin 'vim-scripts/The-NERD-tree'
 
 Plugin 'Raimondi/delimitMate'
 
