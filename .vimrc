@@ -16,7 +16,8 @@ set nocompatible
 "" set listchars=tab:\|\ 
 "set list
 
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+set backspace=indent,eol,start
+nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap H :tabprevious<CR>
 nnoremap L :tabnext<CR>
 map <Leader>g <Esc>:GitGutterSignsToggle<CR>
