@@ -5,8 +5,6 @@ let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 set ttimeoutlen=10
 set updatetime=250
 set nocompatible
@@ -20,13 +18,16 @@ set backspace=indent,eol,start
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap H :tabprevious<CR>
 nnoremap L :tabnext<CR>
+nnoremap p "0p
+nnoremap P "0P
+nnoremap e :noh<CR>
+nnoremap / /\c
 map <Leader>g <Esc>:GitGutterSignsToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
-cnoreabbrev ag Ack!
 set number
 set cursorline
 set autoindent
@@ -63,8 +64,6 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'majutsushi/tagbar'
 
-Plugin 'mileszs/ack.vim'
-
 Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -95,6 +94,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols_ascii = 1
 
 if !exists('g:airline_symbols')
