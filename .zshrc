@@ -84,5 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias dc=cd 
+alias dc=cd
 alias rg='rg --colors=path:style:bold --colors=path:fg:green --colors=line:style:bold --colors=line:fg:yellow --colors=match:style:nobold --colors=match:bg:yellow --colors=match:fg:black'
+alias v=vim
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tmux new-session -d -c '/synosrc/' -n 'bsrc'
+tmux new-session -d -c '/synosrc/ds.base/source' -n 'bsrc'
 tmux new-window -c '/synopack_1/pkgscripts-ng/' -n 'bpack'
 tmux new-window -n '1'
 tmux new-window -n '3'
