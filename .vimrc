@@ -14,6 +14,7 @@ set nocompatible
 "" set listchars=tab:\|\ 
 "set list
 
+syntax on
 set backspace=indent,eol,start
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap H :tabprevious<CR>

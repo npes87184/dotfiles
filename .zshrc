@@ -51,7 +51,7 @@ ZSH_THEME="af-magic-modified"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-autosuggestions)
+plugins=(git z zsh-autosuggestions extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dc=cd
-alias rg='rg --colors=path:style:bold --colors=path:fg:green --colors=line:style:bold --colors=line:fg:yellow --colors=match:style:nobold --colors=match:bg:yellow --colors=match:fg:black'
 alias v=vim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+setopt HIST_IGNORE_ALL_DUPS
+
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end mode
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
