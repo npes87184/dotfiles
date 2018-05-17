@@ -57,7 +57,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
-Plugin 'tomasr/molokai'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 Plugin 'Raimondi/delimitMate'
 
@@ -85,7 +85,7 @@ filetype plugin indent on    " required
 " airline "
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='minimalist'
 
 set encoding=utf-8
 
@@ -117,5 +117,5 @@ let g:ctrlp_prompt_mappings = {
 let g:gitgutter_map_keys = 0
 let g:gitgutter_signs = 0
 
-colorscheme molokai
-
+set background=dark
+colorscheme hybrid_reverse
