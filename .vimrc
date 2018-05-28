@@ -21,6 +21,7 @@ nnoremap H :tabprevious<CR>
 nnoremap L :tabnext<CR>
 nnoremap p "0p
 nnoremap P "0P
+nnoremap d "_d
 nnoremap e :noh<CR>
 nnoremap / /\c
 map <Leader>g <Esc>:GitGutterSignsToggle<CR>
@@ -85,7 +86,7 @@ filetype plugin indent on    " required
 " airline "
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='bubblegum'
 
 set encoding=utf-8
 
@@ -119,3 +120,6 @@ let g:gitgutter_signs = 0
 
 set background=dark
 colorscheme hybrid_reverse
+
+" Let clipboard in vim the same as ubuntu internal.
+set clipboard=unnamedplus
