@@ -17,6 +17,7 @@ set nocompatible
 syntax on
 set backspace=indent,eol,start
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <C-]> :tab split<CR>:cs find c <C-R>=expand("<cword>")<CR><CR>
 nnoremap H :tabprevious<CR>
 nnoremap L :tabnext<CR>
 nnoremap p "0p
