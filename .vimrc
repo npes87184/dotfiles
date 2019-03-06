@@ -124,3 +124,6 @@ colorscheme hybrid_reverse
 
 " Let clipboard in vim the same as ubuntu internal.
 set clipboard=unnamedplus
+
+set expandtab
+set tabstop=4
