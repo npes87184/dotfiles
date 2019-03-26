@@ -67,8 +67,6 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'majutsushi/tagbar'
 
-Plugin 'airblade/vim-gitgutter'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -98,6 +96,7 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#show_tab_count = 0
 "let g:airline_symbols_ascii = 1
 
 if !exists('g:airline_symbols')
@@ -115,15 +114,5 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-" Turn off gitgutter default
-let g:gitgutter_map_keys = 0
-let g:gitgutter_signs = 0
-
 set background=dark
 colorscheme hybrid_reverse
-
-" Let clipboard in vim the same as ubuntu internal.
-set clipboard=unnamedplus
-
-set expandtab
-set tabstop=4
