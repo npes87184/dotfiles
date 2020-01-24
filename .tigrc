@@ -1,0 +1,3 @@
+source ~/tig-theme-molokai-like/colors/molokai-like-theme.tigrc
+set diff-highlight = true
+set tab-size = 4
